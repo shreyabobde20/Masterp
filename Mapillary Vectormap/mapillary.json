@@ -1,0 +1,32 @@
+{
+    "version": 8,
+    "sources": {
+        "mapillary-source": {
+            "tiles": [
+                "https://tiles3.mapillary.com/v0.1/{z}/{x}/{y}.mvt"
+            ],
+            "type": "vector"
+        }
+    },
+    "layers": [
+        {
+            "id": "mapillary-lines",
+            "type": "line",
+            "source": "mapillary-source",
+            "source-layer": "mapillary-sequences",
+            "interactive": true,
+            "minzoom": 0,
+            "maxzoom": 18,
+            "layout": {
+                "line-join": "round",
+                "line-cap":  "round",
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-opacity": 0.6,
+                "line-color": "#39AF64",
+                "line-width": 2
+            }
+        }
+    ]
+}
